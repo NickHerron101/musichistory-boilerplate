@@ -1,0 +1,70 @@
+/* General */
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1em;
+	background-color: white;
+	color: black;
+}
+
+
+/* Nav bar */
+
+nav {
+	background-color: #FFB4B0 ;
+	border: 2px solid black;
+
+}
+
+nav li {
+	display: inline;
+	text-decoration: none;
+}
+
+/*container */
+
+/* main div */
+
+#main {
+	background-color: #FEFAC0;
+	border: 2px solid black;
+	width: 68%;
+	margin-top: 20px;
+	float: right;
+	margin-bottom: 20px;
+}
+
+p.songName {
+	font-family: Tahoma;
+	font-size: 1.5em;
+}
+
+div#main > section {
+	padding-left: 20px;
+}
+
+/* side div */
+
+fieldset{
+	border: none;
+}
+
+
+
+
+#side {
+	background-color: #4DD7FA;
+	border: 2px solid black;
+	width: 27%;
+	margin-top: 20px;
+	float: left;
+
+
+}
+
+section.side {
+	padding: 10px;
+
+}
+
+
+
