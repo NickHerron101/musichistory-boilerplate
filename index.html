@@ -4,12 +4,69 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <p>Test</p>
-  <p>Test 2</p>
-</head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<head>
 
 <body>
-
-
-</body>
+		<nav>
+		
+			<ul>
+				<li>View Music <strong>|</strong> </li>
+				<li><a href="#">Add Music</a> <strong>|</strong></li>
+				<li><a href="#">Profile</a></li>
+			</ul>
+		</nav>
+			<div id="main">
+				<section>
+					<p class="songName">Song Name</p>
+					<p>Artist name | Album name | Genre</p>
+				</section>
+				<section>
+					<p class="songName">Song Name</p>
+					<p>Artist name | Album name | Genre</p>
+				</section>
+				<section>
+					<p class="songName">Song Name</p>
+					<p>Artist name | Album name | Genre</p>
+				</section>
+				<section>
+					<p class="songName">Song Name</p>
+					<p>Artist name | Album name | Genre</p>
+				</section>
+			</div>
+			<div id="side">
+				<form>
+					<fieldset>
+						<p>Song length:</p>
+						<label>Artist:<br>
+						<select name="artist">
+							<option value="options">Options</option>
+						</select></label>
+						<br><br>
+						<label>Album:<br>
+						<select name="album">
+							<option value="options">Options</option>
+						</select></label><br>
+						<br>
+						Genre:<br><br>
+						<table>
+						<tr>
+							<td><label><input type="checkbox" name="genre" value="rock">Rock</label></td>
+							<td><label><input type="checkbox" name="genre" value="pop">Pop</label></td>
+						</tr>
+						<tr>	
+							<td><label><input type="checkbox" name="genre" value="blues">Blues</label></td>
+							<td><label><input type="checkbox" name="genre" value="classical">Classical</label></td>
+						</tr>
+						<tr>
+							<td><label><input type="checkbox" name="genre" value="jazz">Jazz</label></td>
+							<td><label><input type="checkbox" name="genre" value="hip_hop">Hip hop</label></td>
+						</tr>
+					</div>
+						
+					</fieldset>
+				</form>		
+		
+			
+		</body>
 </html>
