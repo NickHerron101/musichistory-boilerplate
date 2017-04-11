@@ -31,6 +31,8 @@ nav li {
 	margin-top: 20px;
 	float: right;
 	margin-bottom: 20px;
+	height: 400px;
+
 }
 
 p.songName {
@@ -48,16 +50,13 @@ fieldset{
 	border: none;
 }
 
-
-
-
 #side {
 	background-color: #4DD7FA;
 	border: 2px solid black;
 	width: 27%;
 	margin-top: 20px;
 	float: left;
-
+	height: 400px;
 
 }
 
@@ -66,5 +65,13 @@ section.side {
 
 }
 
+input.submit {
+	width: 100%;
+}
+
+table {
+	width: 100%;
+	padding-left: 30px;
+}
 
 

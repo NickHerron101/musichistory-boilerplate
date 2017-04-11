@@ -9,52 +9,69 @@
 
 <body>
 		<nav>
-		
 			<ul>
 				<li>View Music <strong>|</strong> </li>
 				<li><a href="#">Add Music</a> <strong>|</strong></li>
 				<li><a href="#">Profile</a></li>
 			</ul>
 		</nav>
+
 			<div id="main">
 				<section>
-					<p class="songName">Song Name</p>
-					<p>Artist name | Album name | Genre</p>
+					<p class="songName">In Bloom</p>
+					<p>Nirvana | Nevermind | Rock</p>
 				</section>
 				<section>
-					<p class="songName">Song Name</p>
-					<p>Artist name | Album name | Genre</p>
+					<p class="songName">Fluffy</p>
+					<p>Wolf Alice | My Love is Cool | Rock</p>
 				</section>
 				<section>
-					<p class="songName">Song Name</p>
-					<p>Artist name | Album name | Genre</p>
+					<p class="songName">Exodus</p>
+					<p>Bob Marley | Exodus | Reggae</p>
 				</section>
 				<section>
-					<p class="songName">Song Name</p>
-					<p>Artist name | Album name | Genre</p>
+					<p class="songName">'Round Midnight</p>
+					<p> Grant Green | Green Street | Jazz</p>
 				</section>
 			</div>
+			<div class="container">
 			<div id="side">
 				<form>
 					<fieldset>
-						<p>Song length:</p>
-						<label>Artist:<br>
+						<strong><p>Song length:</p></strong>
+						<input type="range" min="0" max="100"><br><br>
+						<strong><label>Artist:</strong><br>
 						<select name="artist">
-							<option value="options">Options</option>
+							<option value="options"></option>
+							<option value="options">Nirvana</option>
+							<option value="options">Bob Marley</option>
+							<option value="options">Grant Greene</option>
+							<option value="options">Kilo Kish</option>
+							<option value="options">Wolf Alice</option>
 						</select></label>
 						<br><br>
-						<label>Album:<br>
+						<strong><label>Album:</strong><br>
 						<select name="album">
-							<option value="options">Options</option>
+							<option value="options"></option>
+							<option value="options">Across</option>
+							<option value="options">In Utero</option>
+							<option value="options">Exodus</option>
+							<option value="options">My Love is Cool</option>
+							<option value="options">Reflections in Real Time</option>
+							<option value="options">Nevermind</option>
+							<option value="options">Blush</option>
+							<option value="options">Catch a Fire</option>
+							<option value="options">Idle Moments</option>
+							<option value="options">Green Street</option>
 						</select></label><br>
 						<br>
-						Genre:<br><br>
+						<strong>Genre:</strong><br><br>
 						<table>
 						<tr>
 							<td><label><input type="checkbox" name="genre" value="rock">Rock</label></td>
 							<td><label><input type="checkbox" name="genre" value="pop">Pop</label></td>
 						</tr>
-						<tr>	
+						<tr>
 							<td><label><input type="checkbox" name="genre" value="blues">Blues</label></td>
 							<td><label><input type="checkbox" name="genre" value="classical">Classical</label></td>
 						</tr>
@@ -62,11 +79,15 @@
 							<td><label><input type="checkbox" name="genre" value="jazz">Jazz</label></td>
 							<td><label><input type="checkbox" name="genre" value="hip_hop">Hip hop</label></td>
 						</tr>
+						</table>
+						<br><br>
+						<input class="submit" type="submit" value="Filter">
+						<br>
 					</div>
-						
+				</div>
 					</fieldset>
-				</form>		
-		
-			
+				</form>
+
+
 		</body>
 </html>
