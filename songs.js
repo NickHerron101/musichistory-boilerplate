@@ -21,9 +21,23 @@ for (var i = 0; i < songs.length; i++) {
 }
 console.log("newArray",songs);
 
-document.getElementById("main").innerHTML = songs;
+// putting in new divs for the most part
+songs.forEach(function(element) {
+	quoteBlock = `<div>${songs[0]}
+					  </div><br><div>${songs[1]}
+					  </div><br><div>${songs[2]}
+					  </div><br><div>${songs[3]}
+					  </div><br><div>${songs[4]}
+					  </div><br><div>${songs[5]}
+					  </div><br><div>${songs[6]}
+					  </div><br>`;
+});
 
+// songs.forEach(function(element){
+// 	quoteBlock += `<div>${songs}</div><br>`
+// });
 
+document.getElementById("main").innerHTML = quoteBlock;
 
 
 
