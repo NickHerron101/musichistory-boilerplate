@@ -11,6 +11,7 @@ songs.push("Fluffy - by Wolf Alice on the album My Love is Cool");
 
 console.log(songs);
 
+
 //looping and replacing
 for (var i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace("*", "");
