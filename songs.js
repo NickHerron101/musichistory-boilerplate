@@ -53,6 +53,7 @@ profile.addEventListener("click", function(event){
 	formFill.classList.add("hidden");
 })
 
+
 /// getting values for input boxes
 var addButton = document.getElementById("buttonAdd");
 addButton.addEventListener("click", function(event){
