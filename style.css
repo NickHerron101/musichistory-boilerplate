@@ -74,4 +74,12 @@ table {
 	padding-left: 30px;
 }
 
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+.visible {
+	display: block;
+	visibility: visible;
+}
 
