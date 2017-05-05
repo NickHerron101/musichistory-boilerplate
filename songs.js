@@ -36,9 +36,38 @@ songs.forEach(function(element) {
 // songs.forEach(function(element){
 // 	quoteBlock += `<div>${songs}</div><br>`
 // });
+var main = document.getElementById("main");
+main.innerHTML = quoteBlock;
 
-document.getElementById("main").innerHTML = quoteBlock;
+var addMusic = document.getElementById("addMusic");
+var profile = document.getElementById("pro");
+var formFill = document.getElementById("formFill");
+var wrapper = document.getElementById("wrapper");
 
+addMusic.addEventListener("click", function(event){
+	formFill.classList.remove("hidden");
+	wrapper.classList.add("hidden");
+})
+profile.addEventListener("click", function(event){
+	wrapper.classList.remove("hidden");
+	formFill.classList.add("hidden");
+})
+
+
+/// getting values for input boxes
+var addButton = document.getElementById("buttonAdd");
+addButton.addEventListener("click", function(event){
+	console.log("click",event);
+var songName = document.getElementById("SongName").value;
+var artist = document.getElementById("artist").value;
+var album = document.getElementById("album").value;
+	console.log("songname",songName);
+	var newSong ="";
+	newSong += `<div>${songName}| ${artist} | ${album}</div>`
+	var main = document.getElementById("main");
+	console.log("main",main);
+	main.innerHTML += newSong;
+})
 
 
 /// adding to the DOM
@@ -73,3 +102,4 @@ document.getElementById("main").innerHTML = quoteBlock;
 // // // Replace all occurances of the string "the" with "a large".
 // // sonnet = sonnet.replace(/the /gi, "a large ");
 // // console.log("replace the", sonnet);
+
