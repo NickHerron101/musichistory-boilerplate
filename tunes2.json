@@ -1,0 +1,19 @@
+{
+	"things" : [
+		{
+			"name": "garden grove",
+			"artist": "sublime",
+			"album": "sublime"
+		},
+		{
+			"name": "break on through",
+			"artist": "doors",
+			"album": "doors"
+		},
+		{
+			"name": "yesl",
+			"artist": "okay",
+			"album": "this is it"
+		}
+	]
+}
