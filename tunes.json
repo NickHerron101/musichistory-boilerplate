@@ -1,0 +1,19 @@
+{
+	"things" : [
+		{
+			"name": "in bloom",
+			"artist": "nirvana",
+			"album": "nevermind"
+		},
+		{
+			"name": "dammit",
+			"artist": "blink 182",
+			"album": "dude ranch"
+		},
+		{
+			"name": "brainstew",
+			"artist": "greenDay",
+			"album": "i have no idea"
+		}
+	]
+}
