@@ -73,90 +73,112 @@
 // 	console.log("main",main);
 // 	main.innerHTML += newSong;
 // })
+$(document).ready(function (){
 
-var main = document.getElementById("main");
+var songList = $("#list-of-songs");
 
-var dataRequest2 = new XMLHttpRequest();
-dataRequest2.addEventListener("load", dataRequest2LoadComplete);
-dataRequest2.addEventListener("error", dataRequest2Error);
-
-function dataRequest2LoadComplete(event) {
-  console.log("thing data has LOADED");
-  var tunes = JSON.parse(event.target.responseText);
-  console.log("tuneData",tunes);
-  showData(tunes);
-}
-
-function showData(stuffToShow) {
-	console.log("stuffToShow",stuffToShow);
+//Function to do when request is complete
+function showSongs(stuffToShow) {
+	console.log("stu",stuffToShow);
 	var newSongInfo = "";
-	for (var i = 0; i<stuffToShow.things.length; i++) {
-		console.log("stuffToShow",stuffToShow.things[i]);
-		newSongInfo += `<div id=new${i}>${stuffToShow.things[i].name} | ${stuffToShow.things[i].artist} | ${stuffToShow.things[i].album}<button class="delete">delete</button></div>`;
+	for (var i = 0; i < stuffToShow.SongThings.length; i++) {
+		newSongInfo += `<div id=new${i}>${stuffToShow.SongThings[i].name} | ${stuffToShow.SongThings[i].artist} | ${stuffToShow.SongThings[i].album}<button class="delete">delete</button></div>`;
 	}
-	main.innerHTML += newSongInfo;
+	songList.append(newSongInfo);
 
-	var deleteButton = document.getElementsByClassName("delete");
-	for (var j = 0; j < deleteButton.length; j++) {
-		deleteButton[j].addEventListener("click", function (event){
-			console.log("event",event);
-			main.removeChild(event.target.closest('div'));
-		});
-	}
+	// Delete Button on Each Song Div
+	$(".delete").click(function(){
+		$(this).parent().remove();
+	});
 }
-function dataRequest2Error(event) {
-  console.log("dataRequest2 has error");
-}
+//XHR Request
+	$.ajax({
+		url:"tunes.json"
+	}).done(showSongs);
 
-dataRequest2.open("GET", "tunes.json");
-dataRequest2.send();
+	$("#more").click(function(){
+		$.ajax({
+			url: "tunes2.json"
+		}).done(showSongs);
+
+	})
+});
+
+
+
+
+
+
+
+
+
+
+
+// var dataRequest2 = new XMLHttpRequest();
+// dataRequest2.addEventListener("load", dataRequest2LoadComplete);
+// dataRequest2.addEventListener("error", dataRequest2Error);
+
+// function dataRequest2LoadComplete(event) {
+//   console.log("thing data has LOADED");
+//   var tunes = JSON.parse(event.target.responseText);
+//   console.log("tuneData",tunes);
+//   showData(tunes);
+// }
+// function dataRequest2Error(event) {
+//   console.log("dataRequest2 has error");
+// }
+
+// dataRequest2.open("GET", "tunes.json");
+// dataRequest2.send();
+// });
+
 
 ///////////////////////////////////////////////////////////////////
 
-var dataRequest = new XMLHttpRequest();
-dataRequest.addEventListener("load", dataRequestLoadComplete);
-dataRequest.addEventListener("error", dataRequestError);
+// var dataRequest = new XMLHttpRequest();
+// dataRequest.addEventListener("load", dataRequestLoadComplete);
+// dataRequest.addEventListener("error", dataRequestError);
 
-var tunes2;
+// var tunes2;
 
-function dataRequestLoadComplete(event) {
-  console.log("thing data has LOADED");
-  tunes2 = JSON.parse(event.target.responseText);
-  console.log("tuneData",tunes2);
-  // showData(tunes2);
-}
+// function dataRequestLoadComplete(event) {
+//   console.log("thing data has LOADED");
+//   tunes2 = JSON.parse(event.target.responseText);
+//   console.log("tuneData",tunes2);
+//   // showData(tunes2);
+// }
 
-var moreButton = document.getElementById("more");
-moreButton.addEventListener("click", function(event){
-	console.log("click",event);
+// var moreButton = document.getElementById("more");
+// moreButton.addEventListener("click", function(event){
+// 	console.log("click",event);
 
-	showData(tunes2);
+// 	showData(tunes2);
 
-});
+// });
 
-function showData(stuffToShow) {
-	console.log("stuffToShow",stuffToShow);
-	var newSongInfo = "";
-	for (var i = 0; i<stuffToShow.things.length; i++) {
-		console.log("stuffToShow",stuffToShow.things[i]);
-		newSongInfo += `<div id=new${i}>${stuffToShow.things[i].name} | ${stuffToShow.things[i].artist} | ${stuffToShow.things[i].album}<button class="delete">delete</button></div>`;
-	}
-	main.innerHTML += newSongInfo;
+// function showData(stuffToShow) {
+// 	console.log("stuffToShow",stuffToShow);
+// 	var newSongInfo = "";
+// 	for (var i = 0; i<stuffToShow.things.length; i++) {
+// 		console.log("stuffToShow",stuffToShow.things[i]);
+// 		newSongInfo += `<div id=new${i}>${stuffToShow.things[i].name} | ${stuffToShow.things[i].artist} | ${stuffToShow.things[i].album}<button class="delete">delete</button></div>`;
+// 	}
+// 	main.append(newSongInfo);
 
-	var deleteButton = document.getElementsByClassName("delete");
-	for (var j = 0; j < deleteButton.length; j++) {
-		deleteButton[j].addEventListener("click", function (event){
-			console.log("event",event);
-			main.removeChild(event.target.closest('div'));
-		});
-	}
-}
-function dataRequestError(event) {
-  console.log("dataRequest2 has error");
-}
+// 	var deleteButton = document.getElementsByClassName("delete");
+// 	for (var j = 0; j < deleteButton.length; j++) {
+// 		deleteButton[j].addEventListener("click", function (event){
+// 			console.log("event",event);
+// 			main.removeChild(event.target.closest('div'));
+// 		});
+// 	}
+// }
+// function dataRequestError(event) {
+//   console.log("dataRequest2 has error");
+// }
 
-dataRequest.open("GET", "tunes2.json");
-dataRequest.send();
+// dataRequest.open("GET", "tunes2.json");
+// dataRequest.send();
 
 
 

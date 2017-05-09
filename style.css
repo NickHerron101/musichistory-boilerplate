@@ -26,7 +26,7 @@ nav li {
 
 /* main div */
 
-#main {
+#list-of-songs {
 	background-color: #FEFAC0;
 	border: 2px solid black;
 	width: 68%;
@@ -87,6 +87,6 @@ table {
 button#more {
 	position: absolute;
 	right: 10px;
-	bottom: 150px;
+	bottom: 215px;
 }
 
